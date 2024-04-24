@@ -1,235 +1,1100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <link rel="stylesheet" href="styles/output.css"/>
-    
-    <title>Dev Burguer - A melhorar hamburgueria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles/output.css" />
+
+    <title>Chá de casa nova</title>
 </head>
 
 
 <body>
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
-            <img
-                src="./assets/hamb-1.png"
-                alt="Logo DevBurguer"
-                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
-            /> 
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Dev Burguer</h1>
-            <span class="text-white font-medium">Av do guaca, 63, São Paulo - SP</span>
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-black">Chá de casa nova da Gabs!!</h1>
+            <!-- <span class="text-white font-medium">Av do guaca, 63, São Paulo - SP</span> -->
+            <div class="bg-w px-4 py-1 rounded-lg mt-5" id="date-span">
                 <span class="text-white font-medium">
-                    Seg á Dom - 18:00 as 22:00
+                    Contagem regressiva!
                 </span>
+                <p id="diferencaEmDias" class="text-white font-medium" style="text-align: center" ;></p>
             </div>
         </div>
     </header>
 
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-        conheça nosso menu
+        Lista de Presentes
     </h2>
 
     <div id="menu">
         <main class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mb-16">
+
             <div class="flex gap-2">
-                <img
-                    src="./assets/hamb-1.png"
-                    alt="Hamburguer Smash"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
-                />
+                <img src="./assets/1.jpeg" alt="Descascador"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
                 <div>
-                    <p class="font-bold">Hamburguer Smash</p>
-                    <p class="text-sm">Pão de mercado com queijo 2 carnes suculentas e mostarda</p>
+                    <p class="font-bold">Descascador</p>
+                    <p class="text-sm">Descascador de legumes - Plástico Branco
+                    </p>
+                    <p class="font-bold text-lg">R$ 09,38</p>
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 18.90</p>       
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Hamburguer Smash"
-                            data-price="18.92"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        <a href="https://www.magazineluiza.com.br/descascador-fatiador-de-legumes-kit-5-em-1-lamina-de-aco-batata-cenoura-cebola-keita/p/cakaga33h1/ud/dscl/ "
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">
+                                Link sugerido
+                            </button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg- px-5 rounded add-to-cart-btn" 
+                            data-name="Descascador" 
+                            data-price="09.38">
+                            Selecionar Presente
                         </button>
                     </div>
                 </div>
             </div>
 
             <div class="flex gap-2">
-                <img
-                    src="./assets/hamb-2.png"
-                    alt="Hamburguer Duplo"
-                    class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-200"
-                />
+                <img src="./assets/39.jpeg" alt="Escorredor de Louças"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
                 <div>
-                    <p class="font-bold">Hamburguer Duplo</p>
-                    <p class="text-sm">Pão de mercado com queijo 2 carnes suculentas e mostarda</p>
+                    <p class="font-bold">Escorredor de Louças</p>
+                    <p class="text-sm">Escorredor de Louças	Inox</p>
+                    <p class="font-bold text-lg">R$ 59,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="flex gap-2">
+                <img src="./assets/2.jpeg" alt="Descanso de Panela"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Descanso de Panela</p>
+                    <p class="text-sm">Apoio Para Panela Bamboo 2 Peças Mor
+                    </p>
+                    <p class="font-bold text-lg">R$ 29,99</p>
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 25.50</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Hamburguer Smash"
-                            data-price="25.50"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        <a href="https://www.amazon.com.br/Apoio-para-Panelas-Pe%C3%A7as-Bamboo/dp/B0778V3J6J/ref=sr_1_10?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2U07G35WLW8VL&dib=eyJ2IjoiMSJ9.MJSQMIRWbBAsPXc4e5KVMWlO8Wp0_5KLfLgVUAuoYlvx1xpKePVZQvyazfMgjblBLaLMFgjyizl4ZJZL5PJcxoyZjLjMB__U0AxOMn9pUQm7QH3exlBI_YPqEhSON7ZF72KeHSa0k55jCWLxEZmBaTUsTVmIoW9XNKKtRJROtbYfBrCIAgrvj4iYsr9yWb2HtwODEdGHG-iQnvRB3nftFFh7stFvxGR9mjKXrlzjFQY.5I_gH3CrGnlQjjnutlpoIrknCiWt-oauKoDWiXmi7Pg&dib_tag=se&keywords=descanso+de+panela&qid=1713151213&s=kitchen&sprefix=descanso+de+pan%2Ckitchen%2C374&sr=1-10"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">
+                                Link sugerido
+                            </button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Descanso de Panela"
+                            data-price="29.99">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex gap-2">
+                <img src="./assets/3.jpeg" alt="Espremedor de Alho"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Espremedor de Alho</p>
+                    <p class="text-sm">Espremedor de Alho Amassador Triturador em Liga de Zinco</p>
+                    <p class="font-bold text-lg">R$ 28,99</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Espremedor-Alho-Amassador-Triturador-Zinco/dp/B09JYP8VKY/ref=asc_df_B09JYP8VKY/?tag=googleshopp00-20&linkCode=df0&hvadid=379699132246&hvpos=&hvnetw=g&hvrand=11838213462772385941&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-1729461578123&psc=1&mcid=5c15adb86e74391b9ad5640ad9290789"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link
+                                sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Espremedor de Alho"
+                            data-price="28.99">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/4.jpeg" alt="Espremedor de Limão"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Espremedor de Limão</p>
+                    <p class="text-sm">Espremedor de Limão</p>
+                    <p class="font-bold text-lg">R$ 96,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.tramontina.com.br/espremedor-de-limao-tramontina-utilita-em-aco-inox-com-cabo-de-polipropileno-preto/25609100.html?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFoy97cQgOQMD5lcTFZ1sHfm_g31CjGebSpMtvYb_jq0aztxNkFZqfZxoCXLMQAvD_BwE"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link
+                                sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Espremedor de Limão"
+                            data-price="96.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flex gap-2">
+                <img src="./assets/15.jpeg" alt="Liquidificador"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Liquidificador</p>
+                    <p class="text-sm">Espremedor de Limão</p>
+                    <p class="font-bold text-lg">R$ 89,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex gap-2">
+                <img src="./assets/40.jpeg" alt="Porta Guardanapos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Porta Guardanapos</p>
+                    <p class="text-sm">Porta Guardanapos Aço</p>
+                    <p class="font-bold text-lg">R$ 14,83</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex gap-2">
+                <img src="./assets/14.jpeg" alt="Kit Potes Herméticos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit Potes Herméticos</p>
+                    <p class="text-sm">Potes Herméticos Porta-Mantimentos com Tampa de Bambu Electrolux - 4 unidades</p>
+                    <p class="font-bold text-lg">R$ 132,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Potes-Herm%C3%A9ticos-Porta-Mantimentos-Tampa-Electrolux/dp/B094S8TXCT/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3U0HAFZ2EUTM4&dib=eyJ2IjoiMSJ9.h-XuDY3yleQDFWwacW4gQdwZOOZ0ilG6lDU4Zsxix0orS2MjneZBvlX3douVb8Y9rHJtAnEr6W0z4tSnf_219srfE-KY0uf6ACzj3QnRZAcsxYaJoqY3MFDgtWz9raAPR1K-fc4xXi5z43jEvur-UsOcqzbgBX9oYLv3Al1xpzrwjBOBpMG88Ny0TH93CNgZt45YEm_zG2kdJAESyUNFlUran0EDV8-vD0Gtraz3HAg.CdbCf9wcB9TckQKnfC4g6kpfMWe40gsDO9Ti1YM1XvY&dib_tag=se&keywords=pote%2Bmantimentos%2Bvidro&qid=1713154460&s=kitchen&sprefix=pote%2Bmantimentos%2Bvidr%2Ckitchen%2C176&sr=1-4&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9&th=1"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link
+                                sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Kit Potes Herméticos"
+                            data-price="132.90">
+                            Selecionar Presente
                         </button>
                     </div>
                 </div>
             </div>
 
             <div class="flex gap-2">
-                <img
-                    src="./assets/hamb-3.png"
-                    alt="Hamburguer triplo"
-                    class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-200"
-                />
-
+                <img src="./assets/13.jpeg" alt="Saladeira/Travessa"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
                 <div>
-                    <p class="font-bold">Hamburguer triplo</p>
-                    <p class="text-sm">Pão de mercado com queijo 2 carnes suculentas e mostarda</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 30.00</p>
-
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Hamburguer triplo"
-                            data-price="30"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                    <p class="font-bold">Saladeira/Travessa</p>
+                    <p class="text-sm">Jogo Travessas Com Friso Retangular e Oval Paramount</p>
+                    <p class="font-bold text-lg">R$ 49,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://shopee.com.br/product/563158786/21471762603"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Saladeira/Travessa"
+                            data-price="49.90">
+                            Selecionar Presente
                         </button>
                     </div>
                 </div>
             </div>
 
             <div class="flex gap-2">
-                <img
-                    src="./assets/hamb-4.png"
-                    alt="Hamburguer vegano"
-                    class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-200"
-                />
+                <img src="./assets/5.jpeg" 
+                    alt="Colher de Sorvete"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
                 <div>
-                    <p class="font-bold">Hamburguer vegano</p>
-                    <p class="text-sm">Pão de mercado com queijo 2 carnes suculentas e mostarda</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 50.00</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Hamburguer vegano"
-                            data-price="50"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                    <p class="font-bold">Colher de Sorvete</p>
+                    <p class="text-sm">Concha para Sorvete</p>
+                    <p class="font-bold text-lg">R$ 23,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.tramontina.com.br/concha-para-sorvete-tramontina-utilita-com-lamina-em-aco-inox-e-cabo-de-polipropileno-branco/25607180.html?gad_source=1&gclid=Cj0KCQjw8pKxBhD_ARIsAPrG45mjI_9sI3yb5gn7rxb-TYI0F1PXjx0Hd4gD2e-cT1BKNZzH1ZXJumIaAqqfEALw_wcB"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Colher de Sorvete"
+                            data-price="23.00">
+                            Selecionar Presente
                         </button>
                     </div>
                 </div>
             </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/42.jpeg" alt="Porta Talher com Tampa"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Porta Talher com Tampa</p>
+                    <p class="text-sm">Porta Talher com Tampa Plástico Transparente</p>
+                    <p class="font-bold text-lg">R$ 28,99</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+ 
+
+            <div class="flex gap-2">
+                <img src="./assets/6.jpeg" 
+                    alt="Kit 6 Tijelas"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit 6 Tijelas</p>
+                    <p class="text-sm">Kit 6 Tijelas Plástico Branco, Cinza ou Azul Claro</p>
+                    <p class="font-bold text-lg">R$ 58,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Cumbuquinhas-Pl%C3%A1stico-Pequenas-Sobremesa-Cinquetti/dp/B0CN9H7K64/ref=sr_1_20?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=126HKUJT80C5W&dib=eyJ2IjoiMSJ9.Pw47ihy-QYZ01u45okdneIDaEsTyTAqdCMpGNHUQnY3DG9oxaKfdJRzYvgAVrRnX7NLW8lc8iHbX1YN4oGt6O4Rr-g3oYYyfnbLLVN1tO9-bQ9MVI_KxxtVxh0HefjViaPuzpUaL6T4uiA8W9_6AUz_RE-Snt8i23dK85qQ3-hhMmoq4wBhsPqIIXiOnh7apnZAlUIqICpM8i-gUgls3aWuIJtrSVXcqgjdYUITH8ng.2cAJp98zuyFMyPYrEGH2byPKIFPeOzN2x9dGnscI_Jg&dib_tag=se&keywords=tigela+plastico&qid=1713148430&s=kitchen&sprefix=tijela+plastic%2Ckitchen%2C215&sr=1-20"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit 6 Tijelas"
+                            data-price="58.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/7.jpeg" 
+                    alt="Escorredor de Massas"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Escorredor de Massas</p>
+                    <p class="text-sm">Escorredor de Massas	Inox</p>
+                    <p class="font-bold text-lg">R$ 58,63</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://produto.mercadolivre.com.br/MLB-2867168380-kit-escorredor-massas-arroz-legumes-tigela-bowl-aco-inox-_JM?matt_tool=63065976&matt_word=&matt_source=google&matt_campaign_id=14302215534&matt_ad_group_id=154967597988&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315899&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=128837060&matt_product_id=MLB2867168380&matt_product_partition_id=1960832236313&matt_target_id=aud-2009166904988:pla-1960832236313&cq_src=google_ads&cq_cmp=14302215534&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFow-uGrgf088CuUcvn_D_iHPu5LbnqReJGa8wvfDr_YgdmUB1xPRo4RoCfaMQAvD_BwE"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Escorredor de Massas"
+                            data-price="58.63">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/9.jpeg" 
+                    alt="Kit utensilhos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit utensilhos</p>
+                    <p class="text-sm">Jogo de Utensílios</p>
+                    <p class="font-bold text-lg">R$ 128,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Jogo-Utens%C3%ADlios-Pe%C3%A7as-Prata-Tramontina/dp/B076M5NHVT/ref=asc_df_B076M5NHVT/?tag=googleshopp00-20&linkCode=df0&hvadid=379751109541&hvpos=&hvnetw=g&hvrand=17632126626889805703&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-812002844545&mcid=33debab052b73b8995fa47d311f62d9c&th=1"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit utensilhos"
+                            data-price="128.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/10.jpeg" 
+                    alt="Ralador"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Ralador</p>
+                    <p class="text-sm">Ralador Preto</p>
+                    <p class="font-bold text-lg">R$ 27,52</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Ralador-Tramontina-Easy-25106400-Preto/dp/B076MBZ67S/ref=asc_df_B076MBZ67S/?tag=googleshopp00-20&linkCode=df0&hvadid=379699132246&hvpos=&hvnetw=g&hvrand=4511743742608346403&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-871739870334&mcid=ba2decc1d45132b6b8c2cf4e6c2a0307&th=1"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Ralador"
+                            data-price="27.52">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/41.jpeg" alt="Prendedor de Embalagens"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Prendedor de Embalagens</p>
+                    <p class="text-sm">Prendedor de Embalagens	Plástico Colorido</p>
+                    <p class="font-bold text-lg">R$ 26,70</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/43.jpeg" alt="Copo Medidor"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Copo Medidor</p>
+                    <p class="text-sm">Copo Medidor	Plástico Transparente</p>
+                    <p class="font-bold text-lg">R$ 10,98</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/11.jpeg" 
+                    alt="Kit utensilhos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit utensilhos</p>
+                    <p class="text-sm">Kit Utensílios de Silicone com Pegador Azul 5 Peças - Oikos</p>
+                    <p class="font-bold text-lg">R$ 90,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/OIKOS-Kit-Cozinha-B%C3%A1sico-Pe%C3%A7as/dp/B09DJ5H8G7/ref=sr_1_9?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.PwHTbnaZ0W49dNnZMucAFc9baXyTYYqgxSxg5paCB96zbA1tsAgLfvkDdqQ0FeMtGhMUYs1XSl7B6lYq9duDghZG9CD1kLA8fIQZEEGuvTIHQB6hhDXN8MxqhbGUOv2WkhGuFhn3iMI-axoh3NICZuo6I_qyu9CyjjqkYy0XPT6vUTDp-xEpoZ9BLf8M95zPa0QkymITR5qgqmblN1GAfWiGASaGG4hxFoCHZD4MzoM.M27uQNK_46JAMuKLdASCbYXGfqe8Xp_M_yZ_HClWct0&dib_tag=se&keywords=kit+silicone&qid=1713138568&s=kitchen&sr=1-9"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit utensilhos"
+                            data-price="90.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/12.jpeg" 
+                    alt="Tabua"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Tabua</p>
+                    <p class="text-sm">Tábua em Polipropileno Branco</p>
+                    <p class="font-bold text-lg">R$ 40,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.tramontina.com.br/tabua-tramontina-mixcolor-em-polipropileno-branco/25053180.html?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFoznOA9mFopmnRqsD9lRfIxDdqWHVB-hIoHfoyxDhJ4CQc8DlyjhsLxoCnNgQAvD_BwE"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Tabua"
+                            data-price="40.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/44.jpeg" alt="Mini Processador Triturador de Alimentos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Mini Processador Triturador de Alimentos</p>
+                    <p class="text-sm">Mini Processador Triturador de Alimentos Plástico Cinza ou Azul Claro</p>
+                    <p class="font-bold text-lg">R$ 20,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/17.jpeg" 
+                    alt="Kit Pote Escorredor"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit Pote Escorredor</p>
+                    <p class="text-sm">Kit Pote organizador de geladeira com escorredor</p>
+                    <p class="font-bold text-lg">R$ 78,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Organizadores-Geladeira-Alimentos-Herm%C3%A9ticos-Freezer/dp/B0C491YYB6/ref=asc_df_B0C491YYB6/?tag=googleshopp00-20&linkCode=df0&hvadid=647505722315&hvpos=&hvnetw=g&hvrand=14823384820278800113&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-2206855875301&psc=1&mcid=688bf24e6e2c3d038dc42fb49babd49b"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit Pote Escorredor"
+                            data-price="78.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/45.jpeg" alt="Rodo de pia com suporte"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Rodo de pia com suporte</p>
+                    <p class="text-sm">Rodo de pia com suporte	Plástico Cinza</p>
+                    <p class="font-bold text-lg">R$ 13,75</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/16.jpeg" 
+                    alt="Kit Peneiras"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit Peneiras</p>
+                    <p class="text-sm">Jogo 3 Peneiras Aço Inox Luxo Tamanho 20cm, 16cm, 12cm Kit</p>
+                    <p class="font-bold text-lg">R$ 29,95</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://produto.mercadolivre.com.br/MLB-4297667664-jogo-3-peneiras-aco-inox-luxo-tamanho-20cm-16cm-12cm-kit-_JM?matt_tool=81106094&matt_word=&matt_source=google&matt_campaign_id=14302215564&matt_ad_group_id=154967597508&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315917&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=756300848&matt_product_id=MLB4297667664&matt_product_partition_id=1960857711113&matt_target_id=aud-2009166904988:pla-1960857711113&cq_src=google_ads&cq_cmp=14302215564&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=Cj0KCQjw8pKxBhD_ARIsAPrG45kUpf7q6OJDIZH-sKqofwuPFkoLJzrffY8KMl9ByfdZ9eEGbRo6hZsaArCmEALw_wcB#reviews"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit Peneiras"
+                            data-price="29.95">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/18.jpeg" 
+                    alt="Kit Potes Vidro"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit Potes Vidro</p>
+                    <p class="text-sm">Jogo 4 Pote de vidro com Tampa Azul, Branca ou Cinza</p>
+                    <p class="font-bold text-lg">R$ 117.90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://produto.mercadolivre.com.br/MLB-793490943-jogo-4-pote-marinex-facilita-vap-_JM#polycard_client=recommendations_vip-pads-up&reco_backend=vip_pads_up_ranker_retrieval_system_marketplace&reco_client=vip-pads-up&reco_item_pos=1&reco_backend_type=low_level&reco_id=0e365a6b-b13a-4cab-842f-e7dba1d77a32&is_advertising=true&ad_domain=VIPDESKTOP_UP&ad_position=2&ad_click_id=M2MzY2M3YzUtMjA0My00NWVjLThkZGUtOTViZDM4ZThkMjA2"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit Potes Vidro"
+                            data-price="117.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/47.jpeg" alt="Jogo de Porta Mantimentos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Jogo de Porta Mantimentos</p>
+                    <p class="text-sm">Jogo de Porta Mantimentos Vidro Transparente</p>
+                    <p class="font-bold text-lg">R$ 84,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/19.jpeg" 
+                    alt="Kit Potes Plastico"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit Potes Plastico</p>
+                    <p class="text-sm">Kit com 4 unidades de plástico com Tampa Azul, Branca ou Cinza</p>
+                    <p class="font-bold text-lg">R$ 49.90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Kit-Potes-para-Alimentos-Electrolux/dp/B077PXCJ9T/ref=asc_df_B077PXCJ9T/?tag=googleshopp06-20&linkCode=df0&hvadid=379698488541&hvpos=&hvnetw=g&hvrand=9905859607859389066&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-875186660157&psc=1&mcid=03319905f84933b6b7d85d105ce439e7"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit Potes Plastico"
+                            data-price="49.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/29.jpeg" 
+                    alt="Conjunto Assadeiras"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Conjunto Assadeiras</p>
+                    <p class="text-sm">Conjunto De Assadeiras de vidro com tampa Branca ou Cinza</p>
+                    <p class="font-bold text-lg">R$ 89.90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Conjunto-Assadeiras-Refrat%C3%A1rio-Marinex-pe%C3%A7as/dp/B09R6PB6RN/ref=asc_df_B09R6PB6RN/?tag=googleshopp00-20&linkCode=df0&hvadid=558994896212&hvpos=&hvnetw=g&hvrand=6644506660619813606&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-1888793008243&psc=1&mcid=1ef6e2c77da4370684e0fedb73277e6f"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Conjunto Assadeiras"
+                            data-price="89.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/46.jpeg" alt="Mini Vassoura para Mesa"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Mini Vassoura para Mesa</p>
+                    <p class="text-sm">Mini Vassoura para Mesa	Plástico Branco</p>
+                    <p class="font-bold text-lg">R$ 26,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/48.jpeg" alt="Pipoqueira Elétrica 110v"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Pipoqueira Elétrica 110v</p>
+                    <p class="text-sm">Pipoqueira Elétrica 110v	Branca</p>
+                    <p class="font-bold text-lg">R$ 134,83</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/49.jpeg" alt="Sanduicheira 110v"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Sanduicheira 110v</p>
+                    <p class="text-sm">Sanduicheira 110v	Preta</p>
+                    <p class="font-bold text-lg">R$ 134,83</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/21.jpeg" 
+                    alt="Jogo de Talheres"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Jogo de Talheres</p>
+                    <p class="text-sm">Jogo Talheres Aço Inox</p>
+                    <p class="font-bold text-lg">R$ 65,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.mercadolivre.com.br/jogo-talheres-faqueiro-buzios-aco-inox-24-pecas-tramontina/p/MLB35092029?item_id=MLB4587963734&from=gshop&matt_tool=63065976&matt_word=&matt_source=google&matt_campaign_id=14302215534&matt_ad_group_id=154967597988&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315899&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735128188&matt_product_id=MLB35092029-product&matt_product_partition_id=1960832236233&matt_target_id=aud-2009166904988:pla-1960832236233&cq_src=google_ads&cq_cmp=14302215534&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFo_o8wmk-YSxPhTSI3Ahb9Kt5L1cphNKOn4DzJ0Jfv1I8i3YfifHo6xoCF9kQAvD_BwE"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Jogo de Talheres"
+                            data-price="65.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/22.jpeg" 
+                    alt="Fervedor Antiaderente"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Fervedor Antiaderente</p>
+                    <p class="text-sm">Fervedor Antiaderente Preto</p>
+                    <p class="font-bold text-lg">R$ 70,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Fervedor-Revestimento-Antiaderente-Tramontina-Versalhes/dp/B008R7SVZ4/ref=asc_df_B008R7SVZ4/?tag=googleshopp00-20&linkCode=df0&hvadid=379685432325&hvpos=&hvnetw=g&hvrand=17871863025904160725&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-439419965406&mcid=a01a49cc993532a48d9e25ef784b747c&th=1"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Fervedor Antiaderente"
+                            data-price="70.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/50.jpeg" alt="Air Fryer Mondial 3,5L 110v"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Air Fryer Mondial 3,5L 110v</p>
+                    <p class="text-sm">Air Fryer Mondial 3,5L 110v	Preta</p>
+                    <p class="font-bold text-lg">R$ 319,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/23.jpeg" 
+                    alt="Conjunto Frigideiras"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Conjunto Frigideiras</p>
+                    <p class="text-sm">Conjunto Frigideiras Preta</p>
+                    <p class="font-bold text-lg">R$ 46,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Conjunto-Frigideiras-Revestimento-Antiaderente-Antit%C3%A9rmico/dp/B076M6XH7N/ref=asc_df_B076M6XH7N/?tag=googleshopp00-20&linkCode=df0&hvadid=379727342281&hvpos=&hvnetw=g&hvrand=8583445724581410583&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-875186642837&psc=1&mcid=0366feb347653a718c1ab046622859a2"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Conjunto Frigideiras"
+                            data-price="46.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/28.jpeg" 
+                    alt="Porta Frios"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Porta Frios</p>
+                    <p class="text-sm">Porta Frios Plástico com tampa Branca ou Cinza</p>
+                    <p class="font-bold text-lg">R$ 29,99</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Porta-Herm%C3%A9tico-Plas%C3%BAtil-Divis%C3%B3rias-Escorredor/dp/B09YVLJ46V/ref=asc_df_B09YVLJ46V/?tag=googleshopp00-20&linkCode=df0&hvadid=379699132246&hvpos=&hvnetw=g&hvrand=6750142742725211441&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-1885716833412&psc=1&mcid=e8c8cf07812437119bdb937ed80701ac"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Porta Frios"
+                            data-price="29.99">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/27.jpeg" 
+                    alt="Kit Travessas Bandeja"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Kit Travessas Bandeja</p>
+                    <p class="text-sm">Porta Frios Plástico com tampa Branca ou Cinza</p>
+                    <p class="font-bold text-lg">R$ 39,80</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://produto.mercadolivre.com.br/MLB-2677400447-kit-3-travessas-bandeja-aco-inox-oval-rasa-peq-med-grande-_JM?matt_tool=63065976&matt_word=&matt_source=google&matt_campaign_id=14302215534&matt_ad_group_id=154967597988&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315899&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=152235857&matt_product_id=MLB2677400447&matt_product_partition_id=1960832236313&matt_target_id=aud-2009166904988:pla-1960832236313&cq_src=google_ads&cq_cmp=14302215534&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFo_XrEcLXCit7134t32W_BFSR33wtt2YUmc3FZUUrysypEmkbRoAjdxoCJiIQAvD_BwE"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Kit Travessas Bandeja"
+                            data-price="39.80">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/26.jpeg" 
+                    alt="Jogo de 6 copos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Jogo de 6 copos</p>
+                    <p class="text-sm">Jogo de 6 copos de vidro</p>
+                    <p class="font-bold text-lg">R$ 38,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Conjunto-Copos-Altos-Square-Transparente/dp/B0BVGD2V8M/ref=sr_1_20?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=33X8O3BLIW55P&dib=eyJ2IjoiMSJ9.nc9lgm_jdrZNmTqLCG8qfIMp_j1Ci2cIJci4QUW7-Lm9PHNdL-AeQSepMiqloUO1BO7DVqegSHAWH22WwgBayMqKAvRKdHLD5hnTd1n7avSP0PxcuJflIbAWMokHcopetPllgidJS2I0WvYjnzh5OFASc9RrpSBuk45Fd5CzPy6v6JVnFfSRrh4MrrXR9xYv.sSx1jyfmEkXqC23G3CBZqE4ugOagtti0GWuXdQvBUhI&dib_tag=se&keywords=jogo+de+copo+6&qid=1713145595&s=kitchen&sprefix=jogo+de+copos+%2Ckitchen%2C187&sr=1-20"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Jogo de 6 copos"
+                            data-price="38.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/38.jpeg" alt="Saleiro"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Saleiro</p>
+                    <p class="text-sm">Saleiro Acrílico, plástico ou Porcelana com Bambu</p>
+                    <p class="font-bold text-lg">R$ 9,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        </a>
+                        <p style="background-color: rgb(226, 31, 31); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" >
+                            Escolhido
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/25.jpeg" 
+                    alt="Abridor de Latas"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Abridor de Latas</p>
+                    <p class="text-sm">Abridor de Latas Inox</p>
+                    <p class="font-bold text-lg">R$ 8,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Abridor-del-Garrafas-Inox-Verona/dp/B078YYQZFK/ref=pd_rhf_dp_s_pd_crcd_d_sccl_1_3/130-5031242-7613934?pd_rd_w=GvGNU&content-id=amzn1.sym.1b2190ca-db28-46be-85f8-55611bc8c041&pf_rd_p=1b2190ca-db28-46be-85f8-55611bc8c041&pf_rd_r=YDXA5W85B5D5NPK5FKD6&pd_rd_wg=mfWOv&pd_rd_r=07e9c300-6b0f-4816-ab30-a97b391b836c&pd_rd_i=B078YYQZFK&psc=1"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Abridor de Latas"
+                            data-price="8.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/24.jpeg" 
+                    alt="Jogo de 6 Xicaras"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Jogo de 6 Xicaras e pires</p>
+                    <p class="text-sm">Jogo de 6 Xicaras e pires Porcelana Branco</p>
+                    <p class="font-bold text-lg">R$ 84,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://shopee.com.br/product/399706575/22992359267?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFozYvapfYWIjrHkqi8puZd4k7Dcm0TQZmZBGr2g7K_L-hUkoaV0kdJxoCmeIQAvD_BwE"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Jogo de 6 Xicaras"
+                            data-price="84.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/31.jpeg" 
+                    alt="Lixeira"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Lixeira</p>
+                    <p class="text-sm">Lixeira de plástico Azul Claro ou Branco</p>
+                    <p class="font-bold text-lg">R$ 21,99</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Lixeira-Pl%C3%A1stico-Basculante-Litros-Branco/dp/B0BB861N8Z/ref=asc_df_B0BB861N8Z/?tag=googleshopp00-20&linkCode=df0&hvadid=647588228288&hvpos=&hvnetw=g&hvrand=6023904662907125327&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-2199077604843&mcid=0542fbb330d03e19b4c23719c194be0c&th=1"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Lixeira"
+                            data-price="21.99">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/32.jpeg" 
+                    alt="Cafeteira Elétrica"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Cafeteira Elétrica</p>
+                    <p class="text-sm">Cafeteira Elétrica Preta</p>
+                    <p class="font-bold text-lg">R$ 119,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.casasbahia.com.br/cafeteira-eletrica-electrolux-efficiente-ecm10-15-xicaras-preta-55033884/p/55033884?utm_medium=Cpc&utm_source=GP_PLA&IdSku=55033884&idLojista=10037&tipoLojista=1P&&utm_campaign=gg_pmax_core_elpo&gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFoyDDrw70UH6gLe6rXIi-LGMK5kPdVqlbgB7YfLRq9i474d2l2oSW1xoC78gQAvD_BwE&gclsrc=aw.ds"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Cafeteira Elétrica"
+                            data-price="119.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/34.jpeg" 
+                    alt="Espremedor de Laranja"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Espremedor de Laranja</p>
+                    <p class="text-sm">Espremedor de Laranja - Preto</p>
+                    <p class="font-bold text-lg">R$ 139,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Espremedor-frutas-laranjas-electrolux-efficient/dp/B0BTMSKQWL/ref=asc_df_B0BTMRCWYR/?tag=googleshopp00-20&linkCode=df0&hvadid=647429706147&hvpos=&hvnetw=g&hvrand=2637853455439496902&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-1972662701212&mcid=1b6794a7fae8300a981895e627f7fda3&th=1"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Espremedor de Laranja"
+                            data-price="139.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/33.jpeg" 
+                    alt="Organizador de Pia"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Organizador de Pia</p>
+                    <p class="text-sm">Organizador de Pia - Cinza ou Azul claro</p>
+                    <p class="font-bold text-lg">R$ 63,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.magazineluiza.com.br/organizador-para-pia-porta-sabao-multiuso-brinox-suprema/p/jg7de3fdc9/ud/odpi/?&seller_id=casabazarutilidades2&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=69107&gclsrc=aw.ds&gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRh7sVGXWQMLTO7iqLLDqJNfc2vuUTs800EHVPFw3UH_bwtNkbLa2x_hoCQ7cQAvD_BwE"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Organizador de Pia"
+                            data-price="63.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/36.jpeg" 
+                    alt="Açucareiro"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Açucareiro</p>
+                    <p class="text-sm">Açucareiro de Inox</p>
+                    <p class="font-bold text-lg">R$ 16,20</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.mercadolivre.com.br/acucareiro-inox-com-tampa-colher-pote-acucar-450ml-premium/p/MLB25121051#reviews"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Açucareiro"
+                            data-price="16.20">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/35.jpeg" 
+                    alt="Bandeja Café"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Bandeja Café</p>
+                    <p class="text-sm">Bandeja Café - MAdeira branca ou Inox</p>
+                    <p class="font-bold text-lg">R$ 40,00</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://produto.mercadolivre.com.br/MLB-3605233631-bandeja-cantinho-do-cafe-decoraco-cozinha-escritorio-branca-_JM?matt_tool=63065976&matt_word=&matt_source=google&matt_campaign_id=14302215534&matt_ad_group_id=154967597988&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315899&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=406460410&matt_product_id=MLB3605233631&matt_product_partition_id=1960832236313&matt_target_id=aud-2009166904988:pla-1960832236313&cq_src=google_ads&cq_cmp=14302215534&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=Cj0KCQjw8pKxBhD_ARIsAPrG45lkFb3zpDbsiYLtlV0XDTOca4UbqW8Gv-rIl9kl1FpQfFEeeD2nG8EaAuVEEALw_wcB"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Bandeja Café"
+                            data-price="40.00">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/37.jpeg" 
+                    alt="Pote Guloseimas"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200" />
+                <div>
+                    <p class="font-bold">Pote Guloseimas</p>
+                    <p class="text-sm">Pote Guloseimas - Vidro com tampa arena</p>
+                    <p class="font-bold text-lg">R$ 24,90</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <a href="https://www.amazon.com.br/Porta-Mantimento-Lyor-Transparente-Voltagev/dp/B07WHV8QC9/ref=asc_df_B07WHV8QC9/?tag=googleshopp00-20&linkCode=df0&hvadid=456273449207&hvpos=&hvnetw=g&hvrand=14826593540418721155&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-978814067665&psc=1&mcid=9cda3cce8f283163be644f09c9de3ee6"
+                            target="_blank">
+                            <button class="rounded px-5" style="background-color: rgb(0, 0, 0); color: white;">Link sugerido</button>
+                        </a>
+                        <button style="background-color: rgb(49, 203, 49); color: white;"
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Pote Guloseimas"
+                            data-price="24.90">
+                            Selecionar Presente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
         </main>
 
-        <div class="mx-auto max-w-7xl px-2 my-2 text-center">
-            <h2 class="font-bold text-3xl">
-                Bebidas 
-            </h2>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mb-16" id="menu">
-            <div class="flex gap-2 w-full">
-                <img
-                    src="./assets/refri-1.png"
-                    alt="Coca-cola"
-                    class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-200"
-                />
-                <div class="w-full">
-                    <p class="font-bold">Coca-cola</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 5.00</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Coca-cola"
-                            data-price="5"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"> </i>
-                        </button>
-                    </div>
+
+
+
+        <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden"
+            id="cart-modal">
+
+            <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+                <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+                <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+                <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+                <p class="font-bold">Qual seu nome:</p>
+                <input type="text" placeholder="Digite seu nome" id="address"
+                    class="w-full border-2 p-1  rounded my-1" />
+                <p class="text-red-500 hidden" id="address-warn">Digite seu Nome</p>
+
+                <div class="flex items-center justify-between mt-5 w-full">
+                    <button id="close-modal-btn">Fechar</button>
+                    <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar
+                        Pedido</button>
                 </div>
-            </div>
 
-            <div class="flex gap-2 w-full">
-                <img
-                    src="./assets/refri-2.png"
-                    alt="Guarana"
-                    class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-200"
-                />
-                <div class="w-full">
-                    <p class="font-bold">Guarana</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 5.00</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Guarana"
-                            data-price="5"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"> </i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div 
-    class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden"
-    id="cart-modal">
-
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]"> 
-            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
-            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
-            <p class="font-bold">Endereço de entrega:</p>
-            <input 
-            type="text"
-            placeholder="Digite seu endereço"
-            id="address"
-            class="w-full border-2 p-1  rounded my-1"
-            />
-            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo</p>
-
-            <div class="flex items-center justify-between mt-5 w-full">
-                <button id="close-modal-btn">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
             </div>
 
         </div>
 
-    </div>
+        <footer class="w-full bg-green-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+            <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+                (<span id="cart-count"></span>)
+                Veja os presentes escolhidos!
 
-    <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
-        <button class="flex items-center gap-2 text-white font-bold"
-        id="cart-btn"
-        >
-            (<span id="cart-count"></span>)
-            Veja meu carrinho
-            <i class="fa fa-cart-plus text-lg text-white"></i>
-        </button>
-    </footer>
+            </button>
+        </footer>
 
 
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="script.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="script.js"></script>
 
 </body>
+
 </html>

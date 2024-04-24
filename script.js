@@ -44,7 +44,7 @@ function addToCart(name, price){
     const existingItem = cart.find(item => item.name === name)
 
     if(existingItem){
-        existingItem.quantity += 1;
+        existingItem.quantity += 0;
 
     }else{
         cart.push({
@@ -71,8 +71,6 @@ function updateCartModal(){
         <div class="flex items-center justify-between">
             <div>
                 <p class="font-medium"> ${item.name} </p>
-                <p>Qtd: ${item.quantity} </p>
-                <p class="font-medium mt-2"> R$ ${item.price.toFixed(2)} </p>
                 <br>
             </div>
 
@@ -168,16 +166,17 @@ checkoutBtn.addEventListener("click", function(){
     //enviar pro zap
     const cartItems = cart.map((item) => {
         return (
-            `${item.name} Quantidade: ${item.quantity} Preço: ${item.price} /`
+            ` ${item.name}  |`
         )
         
     }).join("")
 
 
-    const message = encodeURIComponent(cartItems)
-    const phone = "5511963912329"
+    const message = `Oiee Gabi, tudo bom? aqui sou eu, ${addressInput.value}, escolhi te presentear com o item: ${cartItems} `
+    const phone = "5511957455481"
+   
 
-    window.open(`https://wa.me/${phone}?text=${message} Endereço:${addressInput.value}`, "/blank")
+    window.open(`https://wa.me/${phone}?text=${message}`, "/blank")
 
     cart = [];
     updateCartModal();
@@ -188,7 +187,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 22; // true = restaurante aberto
+    return hora >= 0.0 && hora < 23.59; // true = restaurante aberto
 }
 
 const spanItem = document.getElementById("date-span")
@@ -201,3 +200,20 @@ if(isOpen){
     spanItem.classList.remove("bg-green-600")
     spanItem.classList.add("bg-red-500")
 }
+
+
+var dataAtual = new Date();
+
+var dataEvento = new Date(2024, 4, 18);
+
+
+var diferencaEmMilissegundos = dataEvento - dataAtual;
+
+// Convertendo a diferença de milissegundos para dias
+var diferencaEmDias = Math.ceil(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+
+// Selecione o elemento onde você deseja exibir a diferença em dias
+var diferencaEmDiasElement = document.getElementById("diferencaEmDias");
+
+// Defina o conteúdo do elemento como a diferença em dias
+diferencaEmDiasElement.textContent = "Faltam " + diferencaEmDias + " dias";
